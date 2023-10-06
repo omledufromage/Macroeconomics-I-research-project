@@ -1,7 +1,7 @@
 library(pwt10)
 data(pwt10.0)
 attach(pwt10.0)
-help(pwt10.0)
+help("pwt10.0")
 citation(package="pwt10")
 library(ggplot2)
 require(ggplot2)
@@ -45,10 +45,10 @@ capitagdp.labor <- function(country_1, country_2, date) {
   
   options(scipen=50)
   g <- ggplot(df, aes(x), frame=FALSE) 
-  g <- g + geom_line(aes(y=y1, color=legend.y1), size=0.7)
-  g <- g + geom_line(aes(y=y2, color=legend.y2), size=0.7)
-  g <- g + geom_line(aes(y=l1, color=legend.l1), size=0.7) 
-  g <- g + geom_line(aes(y=l2, color=legend.l2), size=0.7)
+  g <- g + geom_line(aes(y=y1, color=legend.y1), linewidth=0.7)
+  g <- g + geom_line(aes(y=y2, color=legend.y2), linewidth=0.7)
+  g <- g + geom_line(aes(y=l1, color=legend.l1), linewidth=0.7) 
+  g <- g + geom_line(aes(y=l2, color=legend.l2), linewidth=0.7)
   
   #g <- g + geom_dl(aes(label = y2), method = list(dl.combine("first.points", "last.points")), cex = 0.8) 
   
